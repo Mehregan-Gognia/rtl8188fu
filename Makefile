@@ -17,8 +17,14 @@ EXTRA_CFLAGS += -Wno-unused
 #EXTRA_CFLAGS += -Wno-uninitialized
 #EXTRA_CFLAGS += -Wno-error=date-time	# Fix compile error on gcc 4.9 and later
 
+# EXTRA_CFLAGS += -I$(src)/include
+# EXTRA_CFLAGS += -I$(src)/hal/phydm
+
+EXTRA_CFLAGS += -I$(src)
 EXTRA_CFLAGS += -I$(src)/include
-EXTRA_CFLAGS += -I$(src)/hal/phydm
+EXTRA_CFLAGS += -I$(src)/core
+EXTRA_CFLAGS += -I$(src)/hal
+EXTRA_CFLAGS += -I$(src)/os_dep
 
 EXTRA_LDFLAGS += --strip-debug
 
